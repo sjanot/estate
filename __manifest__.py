@@ -6,13 +6,14 @@
     'category': 'Category',
     'author': 'Štefan Janoťák',
     'website': 'https://www.symetra.sk/',
-    'license': 'LGPL-1',
+    'license': 'LGPL-3',
+    'application': True,
     'depends': [],
     'data': [
         'security/ir.model.access.csv',
-        'views/estate_menu.xml'
+        'views/estate_property_views.xml',
+        'views/estate_menus.xml'
     ],
     'demo': [],
     'installable': True,
-    'auto_install': False,
 }
