@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="estate_property_types_form_view" model="ir.ui.view">
+            <field name="name">estate.property.types.form</field>
+            <field name="model">estate.property.types</field>
+            <field name="arch" type="xml">
+                <form string="Property type">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" placeholder="Title"/>
+                            </h1>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="estate_property_types_tree_view" model="ir.ui.view">
+            <field name="name">estate.property.types.tree</field>
+            <field name="model">estate.property.types</field>
+            <field name="arch" type="xml">
+                <tree string="Property types">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="estate_property_types_search_view" model="ir.ui.view">
+            <field name="name">estate.property.search</field>
+            <field name="model">estate.property.types</field>
+            <field name="arch" type="xml">
+                <search string="Property type">
+                    <field name="name"/>
+                    <separator/>
+                    <filter string="Start on H" name="start_on_h"
+                            domain="['|', ('name', 'like', 'H%')]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="estate_property_type_action" model="ir.actions.act_window">
+            <field name="name">Property Type</field>
+            <field name="res_model">estate.property.types</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    TYou can add new real estate property types.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>
