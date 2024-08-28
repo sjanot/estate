@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../estate_exercise/.idea/estate.iml" filepath="$PROJECT_DIR$/../estate_exercise/.idea/estate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/estate-addons.iml" filepath="$PROJECT_DIR$/.idea/estate-addons.iml" />
     </modules>
   </component>
 </project>
