@@ -8,6 +8,7 @@ class PropertyOffer(models.Model):
     _sql_constraints = [
         ('price_check', 'check (price >= 0)', 'An offer price must be strictly positive!'),
     ]
+    _order = "price desc"
 
     price = fields.Float(string='Price')
     status = fields.Selection(string='Status', selection=[('accepted', 'Accepted'), ('refused', 'Refused')])

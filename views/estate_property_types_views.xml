@@ -13,6 +13,7 @@
                                 <field name="name" placeholder="Title"/>
                             </h1>
                         </div>
+                        <field name="property_ids"/>
                     </sheet>
                 </form>
             </field>

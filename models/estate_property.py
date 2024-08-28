@@ -11,6 +11,7 @@ class Property(models.Model):
         ('expected_price_check', 'check (expected_price >= 0)', 'A property expected price must be strictly positive!'),
         ('selling_price_check', 'check (selling_price >= 0)', 'A property selling price must be positive!'),
     ]
+    _order = "id desc"
 
     name = fields.Char(string='Title', required=True)
     description = fields.Text(string='Description')
