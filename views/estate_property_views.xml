@@ -69,7 +69,7 @@
             <field name="arch" type="xml">
                 <tree string="Properties" decoration-muted="state == 'sold'"
                       decoration-success="state in ('received','accepted')" decoration-bf="state == 'accepted'">
-                    <field name="state" invisible="1"/>
+                    <field name="state"/>
                     <field name="name"/>
                     <field name="postcode"/>
                     <field name="bedrooms"/>

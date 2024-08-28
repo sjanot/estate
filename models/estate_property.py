@@ -95,3 +95,11 @@ class Property(models.Model):
                             'expected_price': record.expected_price * 0.9
                         }
                     )
+
+    @api.ondelete(at_uninstall=False)
+    def _unlink_if_not_new_canceled(self):
+        for record in self:
+            if record.state not in ('new', 'canceled'):
+                raise UserError('You cannot delete property in state %(current_state)s!' % {'current_state':
+                                                                                        record.state})
+
