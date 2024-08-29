@@ -18,5 +18,3 @@ class PropertyTypes(models.Model):
             record.offer_count = len(record.offer_ids)
         return True
 
-    def empty_func(self):
-        return True
