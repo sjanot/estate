@@ -5,6 +5,8 @@ from odoo.exceptions import ValidationError
 class Property(models.Model):
     _inherit = 'estate.property'
 
+    invoice_line_ids = fields.Many2many(comodel_name='account.move')
+
     def sold_property(self):
         self.ensure_one()
         if not self.buyer:
@@ -18,6 +20,7 @@ class Property(models.Model):
                 Command.create({'name': 'administrative fees', 'quantity': 1, 'price_unit': 100 }),
             ]
         })
+        self.invoice_line_ids = [(4, new_account.id)]
         print("Sold property inherited")
         # Call the parent method to continue the standard process
         return super().sold_property()

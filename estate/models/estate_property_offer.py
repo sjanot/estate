@@ -37,6 +37,7 @@ class PropertyOffer(models.Model):
             for offer in offers:
                 offer.status = 'refused'
             record.status = 'accepted'
+            record.property_id.state = 'accepted'
         return True
 
     def refuse_offer(self):
